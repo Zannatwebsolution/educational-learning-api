@@ -5,11 +5,11 @@ app.use(cors());
 const courses = require('./Data/Course.json');
 
 app.get("/", (req, res)=>{
-	res.send("Hello World !");
+	res.send(courses);
 });
 
 app.get("/courses", (req, res)=>{
-	res.send(courses);
+	res.send(courses.courses);
 });
 
 app.get("/courses/:id", (req, res)=>{
